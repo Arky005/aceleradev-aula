@@ -9,7 +9,7 @@ import br.com.aceleradev.repositories.UsuarioRepository;
 public class MainSistema {
 
     public static void main(String[] args) {
-
+/*
         UsuarioRepository usuarioRepository = new UsuarioRepository();
 
         Aluno aluno = new Aluno(
@@ -44,7 +44,7 @@ public class MainSistema {
 //        System.out.println(disciplina);
 //        disciplina.mostraAlunos();
 
-
+*/
     }
 
 }
