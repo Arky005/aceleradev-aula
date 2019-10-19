@@ -46,6 +46,14 @@ public class Disciplina {
         return tipo;
     }
 
+    public Professor getProfessor() {
+        return professor;
+    }
+
+    public List<Aluno> getAlunos() {
+        return alunos;
+    }
+
     @Override
     public String toString() {
         return "Disciplina{" +

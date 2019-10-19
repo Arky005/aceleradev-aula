@@ -46,6 +46,15 @@ public final class DataLoader {
             listaDisc.add(new Disciplina("disciplina "+i, profs.get(i), tipo));
         }
     }
+    
+    public static void matricularAlunos(List<Disciplina> listaDisc){
+
+        List<Aluno> listaAlunos = new ArrayList<>();
+        popularDeAlunos(listaAlunos);
+        for(int i=0; i<listaDisc.size(); i++){
+                listaDisc.get(i).matricular(listaAlunos.get(i));
+        }
+    }
 
 
 }

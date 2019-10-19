@@ -27,8 +27,15 @@ public class Main {
         mostrarQntPorTipoDisciplina();
 
         //questao3
-        
+        DataLoader.matricularAlunos(listaDisciplinas);
+        mostrarQntAlunosPorProf();
 
+    }
+    
+    public static void mostrarQntAlunosPorProf(){
+        for (Disciplina disciplina : listaDisciplinas) {
+            System.out.println(disciplina.getProfessor().getNome()+": "+disciplina.getAlunos().size());
+        }
     }
 
     public static void mostrarQntPorTipoDisciplina(){
