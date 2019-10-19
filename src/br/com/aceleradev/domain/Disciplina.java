@@ -8,15 +8,20 @@ import java.util.stream.Collectors;
 
 public class Disciplina {
 
-    private String nome;
+    public enum Tipo {
+        HUMANAS, BIOLOGICAS, EXATAS
+    }
 
+    private String nome;
+    private Tipo tipo;
     private List<Aluno> alunos = new ArrayList<>();
 
     private Professor professor;
 
-    public Disciplina(String nome, Professor professor) {
+    public Disciplina(String nome, Professor professor, Tipo tipo) {
         this.nome = nome;
         this.professor = professor;
+        this.tipo = tipo;
     }
 
     public void matricular(Aluno aluno) {
@@ -35,6 +40,10 @@ public class Disciplina {
 //
 //        alunos.forEach(aluno -> System.out.println(aluno));
 //
+    }
+
+    public Tipo getTipo() {
+        return tipo;
     }
 
     @Override
