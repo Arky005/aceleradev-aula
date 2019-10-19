@@ -1,6 +1,7 @@
 package br.com.aceleradev.main;
 
 import br.com.aceleradev.domain.Aluno;
+import br.com.aceleradev.utils.DataLoader;
 
 import java.time.LocalDate;
 import java.time.Month;
@@ -12,19 +13,9 @@ public class Main {
     static List<Aluno> lista = new ArrayList<>();
     public static void main(String[] args) {
 
-        Aluno aluno;
-        LocalDate data = LocalDate.of(1990, Month.DECEMBER, 21) ;
-        for(int i=0; i<5; i++) {
-            aluno = new Aluno(
-                    "Gustavo "+i,
-                    "gustavo",
-                    "123.456.789-12", data);
-            ;
+        DataLoader.popularDeAlunos(lista);
+        System.out.println(getMediaIdade());
 
-            lista.add(aluno);
-        }
-
-        getMediaIdade();
 //        System.out.println(aluno);
 
     }
