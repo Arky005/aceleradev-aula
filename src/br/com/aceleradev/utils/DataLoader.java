@@ -29,7 +29,7 @@ public final class DataLoader {
 
         for(int i=0; i<5; i++) {
             lista.add(new Professor(
-                    "Lucas Pacheco "+i, "lucas123", "132.132.132.90"));
+                    "Lucas Pacheco "+i, "lucas123", "132.132.132.90", 2015));
         }
     }
 

@@ -30,8 +30,21 @@ public class Main {
         DataLoader.matricularAlunos(listaDisciplinas);
         mostrarQntAlunosPorProf();
 
+        //questao4
+        DataLoader.popularDeProfessores(listaProfessores);
+        mostrarAnosExperiencia();
     }
-    
+
+    public static void mostrarAnosExperiencia(){
+        int anos=0;
+        LocalDate dataAtual = LocalDate.now();
+
+        for(int i=0; i<listaProfessores.size(); i++){
+            anos+=(dataAtual.getYear()-listaProfessores.get(i).getAnoInicioCarreira());
+        }
+        System.out.println(anos/listaProfessores.size());
+    }
+
     public static void mostrarQntAlunosPorProf(){
         for (Disciplina disciplina : listaDisciplinas) {
             System.out.println(disciplina.getProfessor().getNome()+": "+disciplina.getAlunos().size());

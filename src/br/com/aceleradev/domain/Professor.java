@@ -5,9 +5,11 @@ import java.util.List;
 public class Professor extends Usuario {
 
     private List<Disciplina> disciplinas;
-    public Professor(String nome, String login, String cpf) {
+    private int anoInicioCarreira;
+    public Professor(String nome, String login, String cpf, int anoInicioCarreira) {
 
         super(nome, login, cpf, null);
+        this.anoInicioCarreira=anoInicioCarreira;
     }
 
     public List<Disciplina> getDisciplinas() {
@@ -16,5 +18,9 @@ public class Professor extends Usuario {
 
     public void addDisciplina(Disciplina d){
 
+    }
+
+    public int getAnoInicioCarreira() {
+        return anoInicioCarreira;
     }
 }
