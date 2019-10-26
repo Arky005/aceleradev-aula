@@ -15,7 +15,7 @@ public class MainAnnotation {
         List<Object> usuarios = new ArrayList<>();
 
         usuarios.add(usuario);
-        gerador.gerarRelatorio(usuarios, 2);
+        gerador.gerarRelatorio(usuarios, 3);
 
     }
 }
