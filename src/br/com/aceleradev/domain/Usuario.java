@@ -1,5 +1,6 @@
 package br.com.aceleradev.domain;
 
+import br.com.aceleradev.annotations.Coluna;
 import br.com.aceleradev.exceptions.LoginInvalidoException;
 
 import java.time.LocalDate;
@@ -20,6 +21,7 @@ public class Usuario {
         this.dataNascimento=nascimento;
     }
 
+    @Coluna(posicao=1, titulo="nome")
     public String getNome() {
         return nome;
     }
@@ -28,6 +30,7 @@ public class Usuario {
         this.nome = nome;
     }
 
+    @Coluna(posicao=3, titulo="login")
     public String getLogin() {
         return login;
     }
@@ -45,6 +48,7 @@ public class Usuario {
         return login.length() <= 3;
     }
 
+    @Coluna(posicao=2, titulo="cpf")
     public String getCpf() {
         return cpf;
     }
