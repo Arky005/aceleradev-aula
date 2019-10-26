@@ -1,8 +1,9 @@
 package br.com.aceleradev.domain;
 
+import java.util.Arrays;
 import java.util.List;
 
-public class Professor extends Usuario {
+public class Professor extends UsuarioAutorizavel {
 
     private List<Disciplina> disciplinas;
     private int anoInicioCarreira;
@@ -22,5 +23,21 @@ public class Professor extends Usuario {
 
     public int getAnoInicioCarreira() {
         return anoInicioCarreira;
+    }
+
+    /*
+    @Override
+    public boolean temAutorizacao() {
+        return true;
+    }*/
+
+    @Override
+    protected boolean verificarAutorizacaoLogin() {
+        return true;
+    }
+
+    @Override
+    protected List<String> getAutorizacao() {
+        return Arrays.asList("PROF");
     }
 }
