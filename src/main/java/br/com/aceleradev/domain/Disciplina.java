@@ -32,7 +32,7 @@ public class Disciplina {
     }
 
     public void mostraAlunos() {
-        alunos.forEach(System.out::println);
+        alunos.forEach(o -> System.out.println(o));
 
 //        alunos.forEach(aluno -> {
 //            System.out.println(aluno);
