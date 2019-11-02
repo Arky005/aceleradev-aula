@@ -2,20 +2,31 @@ package br.com.aceleradev.domain;
 
 import br.com.aceleradev.exceptions.NumeroMaximoDeAlunosException;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Entity
 public class Disciplina {
 
     public enum Tipo {
         HUMANAS, BIOLOGICAS, EXATAS
     }
 
+    @Id
+    private Long Id;
+
     private String nome;
     private Tipo tipo;
+
+    @ManyToMany
+    @JoinTable(name = "disciplina_aluno", joinColumns = {@JoinColumn(name = "id_disciplina")}
+            , inverseJoinColumns = {@JoinColumn(name="id_aluno")})
     private List<Aluno> alunos = new ArrayList<>();
 
+    @ManyToOne
+    @JoinColumn(name = "id_professor")
     private Professor professor;
 
     public Disciplina(String nome, Professor professor, Tipo tipo) {

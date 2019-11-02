@@ -3,15 +3,30 @@ package br.com.aceleradev.domain;
 import br.com.aceleradev.annotations.Coluna;
 import br.com.aceleradev.exceptions.LoginInvalidoException;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.time.LocalDate;
 
 import static br.com.aceleradev.utils.MensagemException.LOGIN_MENOR_DE_TRES_CARACTERES;
 
+@Entity
+@Table(name = "usuario")
 public class Usuario {
 
+    @Id
+    private Long Id;
+
+    @Column(nullable = false)
     private String nome;
+
+    @Column(nullable = false)
     private String login;
+
+    @Column(nullable = false, length = 14, unique = true)
     private String cpf;
+
     private LocalDate dataNascimento;
 
     public Usuario(String nome, String login, String cpf, LocalDate nascimento) {

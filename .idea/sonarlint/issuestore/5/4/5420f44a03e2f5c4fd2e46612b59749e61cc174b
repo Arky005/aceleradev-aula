@@ -1,0 +1,8 @@
+
+gsquid:CommentedOutCodeLine4"<This block of commented-out lines of code should be removed.(™³é¶üÿÿÿÿ
+T
+squid:S106."9Replace this use of System.out or System.err by a logger.(•ªÆøÿÿÿÿ
+asquid:UselessImportCheck"8Remove this unused import 'java.util.stream.Collectors'.(Óóº´úÿÿÿÿ
+asquid:CommentedOutCodeLine0"<This block of commented-out lines of code should be removed.(¾ŒÐ
+lsquid:S00116"MRename this field "Id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´ÕÛ”8—Òìãâ-
+Hsquid:S1612.",Replace this lambda with a method reference.(•ªÆøÿÿÿÿ

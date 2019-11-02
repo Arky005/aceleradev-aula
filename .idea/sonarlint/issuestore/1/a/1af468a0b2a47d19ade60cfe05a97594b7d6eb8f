@@ -1,0 +1,12 @@
+
+Usquid:UselessImportCheck	",Remove this unused import 'java.time.Month'.(¤‚ŽÉøÿÿÿÿ
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(¼íÏ¾úÿÿÿÿ
+O
+squid:S106-"9Replace this use of System.out or System.err by a logger.(®ìÿö
+T
+squid:S1062"9Replace this use of System.out or System.err by a logger.(Š©Ž¬ùÿÿÿÿ
+Gsquid:S16597"+Declare "qntBiologicas" on a separate line.(ïªÇøûÿÿÿÿ
+Dsquid:S16597"(Declare "qntHumanas" on a separate line.(ïªÇøûÿÿÿÿ
+O
+squid:S106E"9Replace this use of System.out or System.err by a logger.(Šãð¥
