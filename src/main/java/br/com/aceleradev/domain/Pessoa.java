@@ -1,9 +1,14 @@
 package br.com.aceleradev.domain;
 
+import javax.persistence.*;
 import java.util.Objects;
 
+@Entity
+@Table(name = "pessoa")
 public class Pessoa {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private double altura;
     private String nome, sobrenome;

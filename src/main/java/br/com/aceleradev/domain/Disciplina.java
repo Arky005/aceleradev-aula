@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Entity
+@Table(name = "disciplina")
 public class Disciplina {
 
     public enum Tipo {
@@ -15,6 +16,7 @@ public class Disciplina {
     }
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long Id;
 
     private String nome;

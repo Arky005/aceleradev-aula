@@ -2,11 +2,13 @@ package br.com.aceleradev.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import java.util.Arrays;
 import java.util.List;
 
 
 @Entity
+@Table(name = "professor")
 public class Professor extends UsuarioAutorizavel {
 
     @OneToMany(mappedBy = "professor")

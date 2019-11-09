@@ -1,8 +1,12 @@
 package br.com.aceleradev.domain;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 
+@Entity
+@Table(name = "coordenador")
 public class Coordernador extends UsuarioAutorizavel {
 
     private long matricula;

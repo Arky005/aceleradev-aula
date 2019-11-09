@@ -3,19 +3,17 @@ package br.com.aceleradev.domain;
 import br.com.aceleradev.annotations.Coluna;
 import br.com.aceleradev.exceptions.LoginInvalidoException;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDate;
 
 import static br.com.aceleradev.utils.MensagemException.LOGIN_MENOR_DE_TRES_CARACTERES;
 
-@Entity
-@Table(name = "usuario")
+@MappedSuperclass
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Usuario {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long Id;
 
     @Column(nullable = false)
